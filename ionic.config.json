@@ -1,0 +1,7 @@
+{
+  "name": "lectura",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
