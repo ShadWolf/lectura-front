@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lectura - Crear una cuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <span>
+      Ingresar correo para crear nueva cuenta
+    </span>
+      <span class="error-message">{{passwordErrors()}}</span>
+      <span class="error-message"
+       *ngIf="(myForm.controls.passwordRetry.get('passwordConfirmation').dirty || myForm.controls.passwordRetry.get('passwordConfirmation').touched)">{{passwordRetryErrors()}}</span>
+    <form [formGroup]="myForm" (ngSubmit)="saveData()">
+      <ion-list lines="none">
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input formControlName="name" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Apellido</ion-label>
+          <ion-input formControlName="lastName" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Correo electronico</ion-label>
+          <ion-input formControlName="email" type="email"></ion-input>
+        </ion-item>
+        <div formGroupName="passwordRetry">
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input formControlName="password" type="password"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Confirmar contraseña</ion-label>
+            <ion-input formControlName="passwordConfirmation" type="password">
+            </ion-input>
+          </ion-item>
+        
+        </div>
+      </ion-list>
+      <div padding>
+        <ion-button block type="submit" [disabled]="myForm.invalid">Guardar</ion-button>
+      </div>
+    </form>
+  
+  </div>
+</ion-content>
+
+
+<ion-footer>
+  <ion-button routerLink="/home" routerDirection="root">
+    <ion-icon slot="start" name="md-arrow-back"> </ion-icon>
+    Volver
+  </ion-button>
+</ion-footer>

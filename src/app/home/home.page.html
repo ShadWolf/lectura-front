@@ -1,14 +1,41 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-row>
+      <ion-title item-left>
+        Lectura
+      </ion-title>
+      <ion-button fill="clear" item-right routerLink="/about" routerDirection="root">
+        <ion-icon name="md-help-circle">
+        </ion-icon>
+      </ion-button>
+    </ion-row>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
+
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    <img src="assets/img/logo.svg" />
+    <span>
+      Diagnosticos y Ejercicios para leer
+      de a partir de 4 años.
+    </span>
+
   </div>
+  <div class="ion-padding bnt-group">
+    <ion-button expand="block" color="success">
+      <ion-icon slot="start" name="md-log-in"></ion-icon>
+      Ingresar
+    </ion-button>
+    <ion-button expand="block" routerLink="/create-account" routerDirection="root">
+      <ion-icon slot="start" name="md-person-add"></ion-icon>
+      Crear Cuenta
+    </ion-button>
+
+  </div>
+
 </ion-content>
+<ion-footer>
+
+</ion-footer>
