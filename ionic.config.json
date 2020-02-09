@@ -1,7 +1,8 @@
 {
-  "name": "lectura",
+  "name": "DiagRead",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
